@@ -1,0 +1,23 @@
+<table border="1" cellpadding="5" cellspacing="5">
+
+    <tr>
+        <td>Hive Temp *F</td>
+        <td>Hive Humidity %</td>
+        <td>Bottom Brood Frame 1</td>
+	<td>Brightness</td>
+	<td>PIR1</td>
+        <td>Weight</td>
+        <td>time</td>
+        <td>uploaded</td>
+        <td>device ID</td>
+        <td>account ID</td>
+    </tr>
+
+{% for row in data %}
+    <tr>
+    {% for d in row %}
+        <td>{{ d }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
